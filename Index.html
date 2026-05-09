@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FEMA 1999 — Complete Regulatory Reference | S S Sancheti & Associates</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy:    #1B3A6B;
+  --navy2:   #142d54;
+  --gold:    #C9A84C;
+  --gold2:   #a8872e;
+  --cream:   #F8F5EE;
+  --parch:   #F2EDE3;
+  --ltblue:  #D6E4F7;
+  --ltgold:  #FFF8E7;
+  --green:   #E6F4EA;
+  --orange:  #FFF3CD;
+  --red:     #FCE8E8;
+  --gray:    #EEEEEE;
+  --text:    #1a1a2e;
+  --muted:   #5a6478;
+  --border:  #D0C9BC;
+  --shadow:  0 2px 16px rgba(27,58,107,.10);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Source Serif 4', Georgia, serif;
+  background: var(--cream);
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* ── HEADER ─────────────────────────────────────────── */
+.site-header {
+  background: var(--navy);
+  color: #fff;
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 24px rgba(0,0,0,.25);
+}
+.header-inner {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 18px 32px 12px;
+  display: flex;
+  align-items: flex-end;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.firm-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 11px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.doc-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: .01em;
+  color: #fff;
+  line-height: 1.15;
+}
+.doc-sub {
+  font-size: 12px;
+  color: rgba(255,255,255,.6);
+  margin-top: 3px;
+  font-style: italic;
+}
+.header-meta {
+  margin-left: auto;
+  text-align: right;
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: rgba(255,255,255,.55);
+  line-height: 1.8;
+}
+.badge {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--navy);
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  font-weight: 500;
+  padding: 2px 8px;
+  border-radius: 2px;
+  letter-spacing: .06em;
+}
+
+/* ── SEARCH BAR ─────────────────────────────────────── */
+.search-bar {
+  background: var(--navy2);
+  padding: 10px 32px;
+  border-top: 1px solid rgba(201,168,76,.2);
+}
+.search-inner {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.search-input {
+  flex: 1;
+  max-width: 480px;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(201,168,76,.35);
+  border-radius: 4px;
+  padding: 7px 14px 7px 36px;
+  color: #fff;
+  font-family: 'Source Serif 4', serif;
+  font-size: 13px;
+  outline: none;
+  transition: border-color .2s;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' viewBox='0 0 24 24' fill='none' stroke='%23C9A84C' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 10px center;
+}
+.search-input::placeholder { color: rgba(255,255,255,.35); }
+.search-input:focus { border-color: var(--gold); }
+.result-count {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: rgba(255,255,255,.45);
+}
+
+/* ── TABS ───────────────────────────────────────────── */
+.tabs-bar {
+  background: var(--navy2);
+  border-bottom: 2px solid var(--gold);
+  padding: 0 32px;
+}
+.tabs-inner {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  gap: 0;
+  overflow-x: auto;
+}
+.tab-btn {
+  background: none;
+  border: none;
+  color: rgba(255,255,255,.5);
+  font-family: 'Source Serif 4', serif;
+  font-size: 13px;
+  padding: 12px 22px;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  white-space: nowrap;
+  transition: all .2s;
+  letter-spacing: .01em;
+}
+.tab-btn:hover { color: rgba(255,255,255,.8); }
+.tab-btn.active {
+  color: var(--gold);
+  border-bottom-color: var(--gold);
+  font-weight: 600;
+}
+.tab-num {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  background: rgba(201,168,76,.15);
+  color: var(--gold);
+  padding: 1px 5px;
+  border-radius: 10px;
+  margin-left: 5px;
+}
+
+/* ── MAIN ───────────────────────────────────────────── */
+.main {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 28px 32px 60px;
+}
+
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+/* ── SECTION TITLE ──────────────────────────────────── */
+.section-title {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 6px;
+}
+.section-title h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: -.01em;
+}
+.section-title .gold-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, var(--gold), transparent);
+  margin-bottom: 4px;
+}
+.section-desc {
+  font-size: 13px;
+  color: var(--muted);
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+/* ── TABLE WRAPPER ──────────────────────────────────── */
+.table-wrap {
+  overflow-x: auto;
+  border-radius: 6px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12.5px;
+}
+thead th {
+  background: var(--navy);
+  color: #fff;
+  font-family: 'Source Serif 4', serif;
+  font-weight: 600;
+  font-size: 11.5px;
+  padding: 11px 13px;
+  text-align: left;
+  letter-spacing: .02em;
+  white-space: nowrap;
+  border-right: 1px solid rgba(255,255,255,.1);
+  position: sticky;
+  top: 0;
+}
+thead th:last-child { border-right: none; }
+tbody tr { transition: background .15s; }
+tbody tr:hover td { filter: brightness(.97); }
+tbody td {
+  padding: 10px 13px;
+  vertical-align: top;
+  border-bottom: 1px solid rgba(0,0,0,.07);
+  border-right: 1px solid rgba(0,0,0,.05);
+  line-height: 1.55;
+}
+tbody td:last-child { border-right: none; }
+tbody tr:last-child td { border-bottom: none; }
+
+/* Row colour classes */
+.row-green  td { background: var(--green); }
+.row-blue   td { background: var(--ltblue); }
+.row-gold   td { background: var(--ltgold); }
+.row-orange td { background: var(--orange); }
+.row-red    td { background: var(--red); }
+.row-gray   td { background: var(--gray); }
+
+/* cell helpers */
+.mono  { font-family: 'DM Mono', monospace; font-size: 11px; }
+.bold  { font-weight: 600; }
+.small { font-size: 11.5px; }
+.center{ text-align: center; }
+.tag {
+  display: inline-block;
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  padding: 2px 7px;
+  border-radius: 3px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.tag-navy   { background: var(--navy);  color: #fff; }
+.tag-gold   { background: var(--gold);  color: var(--navy); }
+.tag-green  { background: #2e7d32;      color: #fff; }
+.tag-orange { background: #e65100;      color: #fff; }
+.tag-red    { background: #c62828;      color: #fff; }
+.tag-blue   { background: #1565c0;      color: #fff; }
+.tag-gray   { background: #757575;      color: #fff; }
+
+/* hidden row (search filter) */
+tr.hidden { display: none; }
+
+/* ── ALERT NOTES ────────────────────────────────────── */
+.alert {
+  display: flex;
+  gap: 10px;
+  padding: 12px 16px;
+  border-radius: 5px;
+  margin-bottom: 18px;
+  font-size: 12.5px;
+  border-left: 4px solid;
+}
+.alert-gold { background: var(--ltgold); border-color: var(--gold); }
+.alert-red  { background: var(--red);    border-color: #c62828; }
+.alert-green{ background: var(--green);  border-color: #2e7d32; }
+.alert-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+.alert-text strong { display: block; margin-bottom: 2px; }
+
+/* ── LEGEND ─────────────────────────────────────────── */
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11.5px;
+  color: var(--muted);
+}
+.legend-dot {
+  width: 13px; height: 13px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+/* ── FOOTER ─────────────────────────────────────────── */
+footer {
+  background: var(--navy);
+  color: rgba(255,255,255,.5);
+  text-align: center;
+  padding: 18px 32px;
+  font-size: 11.5px;
+  font-family: 'DM Mono', monospace;
+  letter-spacing: .04em;
+}
+footer strong { color: var(--gold); }
+
+/* ── PRINT ──────────────────────────────────────────── */
+@media print {
+  .site-header, .search-bar, .tabs-bar, footer { position: static; }
+  .tab-panel { display: block !important; page-break-before: always; }
+  .tab-panel:first-of-type { page-break-before: avoid; }
+  .table-wrap { box-shadow: none; overflow: visible; }
+  thead th { background: #1B3A6B !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+
+@media (max-width: 768px) {
+  .header-inner { padding: 14px 16px 10px; }
+  .main { padding: 20px 12px 40px; }
+  .tabs-bar, .search-bar { padding: 0 12px; }
+  .doc-title { font-size: 17px; }
+  .header-meta { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══ HEADER ═══════════════════════════════════════════════ -->
+<header class="site-header">
+  <div class="header-inner">
+    <div>
+      <div class="firm-name">S S Sancheti &amp; Associates · Chartered Accountants · Mumbai</div>
+      <div class="doc-title">Foreign Exchange Management Act, 1999</div>
+      <div class="doc-sub">Complete Regulatory Reference — Master Directions · Notifications · Rules · Regulations</div>
+    </div>
+    <div class="header-meta">
+      <div><span class="badge">UPDATED</span> May 2026</div>
+      <div>FEMA 1999 · All 49 Sections</div>
+      <div>20 FED Master Directions</div>
+      <div>Latest: FEMA 401/2026-RB · Apr-2026</div>
+    </div>
+  </div>
+  <div class="search-bar">
+    <div class="search-inner">
+      <input class="search-input" type="text" id="searchInput" placeholder="Search sections, MD numbers, notifications, keywords…" autocomplete="off">
+      <span class="result-count" id="resultCount"></span>
+    </div>
+  </div>
+  <div class="tabs-bar">
+    <div class="tabs-inner">
+      <button class="tab-btn active" onclick="switchTab('md-index')">FED Master Directions Index <span class="tab-num">20</span></button>
+      <button class="tab-btn" onclick="switchTab('section-map')">Section-wise Mapping <span class="tab-num">49</span></button>
+      <button class="tab-btn" onclick="switchTab('reg-index')">Regulations &amp; Rules Index <span class="tab-num">27</span></button>
+      <button class="tab-btn" onclick="switchTab('amendments')">2025–26 Amendments Tracker <span class="tab-num">11</span></button>
+    </div>
+  </div>
+</header>
+
+<!-- ══ MAIN ══════════════════════════════════════════════════ -->
+<div class="main">
+
+<!-- ── TAB 1: FED MD INDEX ──────────────────────────────── -->
+<div id="md-index" class="tab-panel active">
+  <div class="section-title"><h2>Official FED Master Directions Index</h2><div class="gold-line"></div></div>
+  <p class="section-desc">All 20 FED Master Directions — official numbers, RBI circular references, FEMA sections, status and scope. Source: ICAI Guidance Note on Audit of Banks (Revised 2022) + official RBI/FED documents.</p>
+
+  <div class="alert alert-gold">
+    <span class="alert-icon">📌</span>
+    <div class="alert-text">
+      <strong>Important note on MD numbering</strong>
+      FED Master Direction numbers are not sequential by date. MD No.17 is the <em>2016-17</em> series (Import of Goods &amp; Services), not 2015-16. MD No.11 is the <em>2017-18</em> series (Foreign Investment in India). MD No.5 is the <em>2018-19</em> series (ECB). Always cite the full reference including year series.
+    </div>
+  </div>
+
+  <div class="legend">
+    <div class="legend-item"><div class="legend-dot" style="background:var(--green)"></div> Active / Recently updated</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--ltblue)"></div> Active — capital/current account</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--ltgold)"></div> Active — NRI / remittances</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--orange)"></div> Superseded / transitional</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--gray)"></div> Miscellaneous / catch-all</div>
+  </div>
+
+  <div class="table-wrap">
+  <table id="tbl-md">
+    <thead><tr>
+      <th style="width:110px">FED MD No.</th>
+      <th style="width:220px">Official Title</th>
+      <th style="width:130px">RBI Circular No.</th>
+      <th style="width:90px">FEMA Section(s)</th>
+      <th style="width:180px">Underlying Regulation(s)</th>
+      <th style="width:120px">Status (May 2026)</th>
+      <th style="width:80px">Last Updated</th>
+      <th>Key Scope / Coverage</th>
+    </tr></thead>
+    <tbody>
+<tr class="row-blue"><td class="mono bold">2/2015-16</td><td>Opening &amp; Maintenance of Rupee/FC Vostro Accounts of Non-Resident Exchange Houses</td><td class="mono">RBI/FED/2015-16/16</td><td class="mono small">S.10, S.11</td><td class="small">FEMA 16/2000-RB</td><td><span class="tag tag-green">Active</span></td><td class="mono small">Sep-2020</td><td class="small">Vostro account maintenance by non-resident exchange houses. Framework for foreign money transfer services (MTSS, DTSS, Rupee Drawing Arrangements). Operational compliance for remittance corridors.</td></tr>
+
+<tr class="row-green"><td class="mono bold">3/2015-16</td><td>Money Changing Activities</td><td class="mono">RBI/FED/2015-16/17</td><td class="mono small">S.10, S.12</td><td class="small">FEMA 401/2026-RB [FEM(Authorised Persons) Regulations 2026]</td><td><span class="tag tag-green">Active</span><br><span class="mono" style="font-size:10px">Updated 28-Nov-2025 + FEMA 401/2026-RB from Apr-2026</span></td><td class="mono small">28-Nov-2025<br>30-Apr-2026</td><td class="small">Authorisation of APs; NOF thresholds; APConnect portal; 75%-to-public quarterly rule; FLM register; concurrent audit. <strong>FEMA 401/2026-RB (30-Apr-2026)</strong>: three-tier AD (Cat-I/II/III), Forex Correspondent model replacing franchisees, FFMC phase-out.</td></tr>
+
+<tr class="row-green"><td class="mono bold">4/2015-16</td><td>Compounding of Contraventions under FEMA, 1999</td><td class="mono">RBI/FED/2015-16/1</td><td class="mono small">S.15</td><td class="small">FEM(Compounding Proceedings) Rules 2024 [GSR 566(E), 12-Sep-2024]</td><td><span class="tag tag-green">Active</span><br><span class="mono" style="font-size:10px">Updated Apr-2025</span></td><td class="mono small">Apr-2025</td><td class="small">Compounding application procedure; computation matrix; LSF (Late Submission Fee) mechanism; ineligible cases (S.3a, ML/TF-linked, repeat within 3 years). Compounding authority: <strong>RBI ≤ ₹5 Cr; ED &gt; ₹5 Cr</strong>. 180-day disposal timeline.</td></tr>
+
+<tr class="row-blue"><td class="mono bold">6/2015-16</td><td>Borrowing &amp; Lending Transactions in Indian Rupee between Persons Resident in India and NRI/PIO</td><td class="mono">RBI/FED/2015-16/2</td><td class="mono small">S.6</td><td class="small">FEMA 4/2000-RB (INR borrowing/lending)</td><td><span class="tag tag-green">Active</span></td><td class="mono small">Jan-2016</td><td class="small">INR loans from PRII to NRI/PIO close relatives. Borrowing by PRII from NRI in INR. FCNR(B)-linked rupee loans. SNRR-linked transactions. Governs rupee-denominated inter-personal/family cross-border flows.</td></tr>
+
+<tr class="row-gold"><td class="mono bold">7/2015-16</td><td>Liberalised Remittance Scheme (LRS)</td><td class="mono">RBI/FED/2017-18/3</td><td class="mono small">S.5</td><td class="small">FEM(CAT) Rules 2000 (Schedule III)</td><td><span class="tag tag-green">Active</span></td><td class="mono small">Sep-2024</td><td class="small">USD 2,50,000 per person per FY for resident individuals (including minors). Permitted: education, travel, maintenance of relatives, gifts, overseas investment, property. Prohibited: margins, lottery, call-back, derivatives (non-hedge). CIMS daily reporting by AD banks. <strong>TCS 20% on remittances &gt; ₹7 L</strong> (non-edu/med) w.e.f. Oct-2023.</td></tr>
+
+<tr class="row-gold"><td class="mono bold">8/2015-16</td><td>Other Remittance Facilities</td><td class="mono">RBI/FED/2015-16/4</td><td class="mono small">S.5, S.10</td><td class="small">FEM(CAT) Rules 2000; FEMA 16/2000-RB</td><td><span class="tag tag-green">Active</span><br><span class="mono" style="font-size:10px">Updated 06-May-2026</span></td><td class="mono small">06-May-2026</td><td class="small">Miscellaneous resident remittance facilities: gifts/donations, foreign travel, education, medical treatment, emigration, maintenance of close relatives abroad, cultural/sports events. All instructions consolidated with source circulars in Appendix.</td></tr>
+
+<tr class="row-green"><td class="mono bold">9/2015-16</td><td>Insurance</td><td class="mono">RBI/FED/2015-16/5</td><td class="mono small">S.6</td><td class="small">FEMA 20(R)/2017-RB; FEM(NDI) Rules 2019; FEM(NDI) 2nd Amdt Rules 2026</td><td><span class="tag tag-green">Active</span><br><span class="mono" style="font-size:10px">Insurance FDI 100% per NDI 2nd Amdt 2026</span></td><td class="mono small">Dec-2021</td><td class="small">Foreign investment in insurance sector. Per <strong>FEM(NDI) 2nd Amendment Rules 2026 (May-2026)</strong>: insurance companies and intermediaries (brokers, TPAs, loss assessors, surveyors) eligible for <strong>100% FDI via automatic route</strong> subject to IRDAI compliance.</td></tr>
+
+<tr class="row-blue"><td class="mono bold">10/2015-16</td><td>Establishment of Branch Office (BO)/Liaison Office (LO)/Project Office (PO) in India by foreign entities</td><td class="mono">RBI/FED/2015-16/6</td><td class="mono small">S.6</td><td class="small">FEMA 6/2000-RB</td><td><span class="tag tag-green">Active</span></td><td class="mono small">May-2021</td><td class="small">Foreign company BO/LO/PO in India via AD Cat-I bank. <strong>Annual Activity Certificate (AAC) by CA within 60 days</strong> of FY end. LO: no commercial activity; BO: can remit profits; PO: tax-neutral till project completion. Form IPI within 90 days for IP acquisition.</td></tr>
+
+<tr class="row-green"><td class="mono bold">11/2017-18<br><span class="mono" style="font-size:10px;color:var(--muted)">[2017-18 series]</span></td><td>Foreign Investment in India</td><td class="mono">RBI/FED/2017-18/60</td><td class="mono small">S.6</td><td class="small">FEMA 20(R)/2017-RB; FEM(NDI) Rules 2019 [NDI Rules 2019 = primary instrument for substantive FDI]</td><td><span class="tag tag-blue">Active (procedural)</span><br><span class="mono" style="font-size:10px">NDI Rules 2019 are primary</span></td><td class="mono small">Mar-2019</td><td class="small">FDI into India: FC-GPR filing within <strong>30 days</strong> of allotment; FC-TRS within <strong>60 days</strong> of transfer. FPI investment procedures. Pricing guidelines. NDI Rules 2019 govern substantive FDI; this MD covers supplementary procedural guidance for AD banks.</td></tr>
+
+<tr class="row-gold"><td class="mono bold">12/2015-16</td><td>Acquisition &amp; Transfer of Immovable Property under FEMA <em>(covers both IN India and OUTSIDE India)</em></td><td class="mono">RBI/FED/2015-16/7</td><td class="mono small">S.6(3)(h)<br>S.6(3)(i)</td><td class="small">FEMA 21/2000-RB (IP in India); FEMA 22/2000-RB (IP outside India)</td><td><span class="tag tag-green">Active</span></td><td class="mono small">Apr-2018</td><td class="small">NRI/OCI: can buy residential/commercial in India (not agricultural/plantation/farmhouse). PROI corporate: branch office property only. PRII acquiring overseas property: gift/inheritance/LRS/period of residence abroad. Repatriation of sale proceeds. Form IPI for corporate PROI.</td></tr>
+
+<tr class="row-gold"><td class="mono bold">13/2015-16</td><td>Remittance of Assets</td><td class="mono">RBI/FED/2015-16/8</td><td class="mono small">S.6(3)</td><td class="small">FEMA 15/2000-RB</td><td><span class="tag tag-green">Active</span></td><td class="mono small">Apr-2016</td><td class="small">Remittance by NRI/OCI of sale proceeds of assets, settlement of deceased estates, winding up of business. <strong>Maximum USD 1 million per FY from NRO account. CA Certificate (Form 15CB) + IT Form 15CA mandatory</strong> for all NRI asset remittances.</td></tr>
+
+<tr class="row-blue"><td class="mono bold">14/2015-16</td><td>Deposits and Accounts</td><td class="mono">RBI/FED/2015-16/9</td><td class="mono small">S.6(4)</td><td class="small">FEMA 5(R)/2016-RB (Deposits); FEMA 4(R)/2018-RB (INR borrowing/lending)</td><td><span class="tag tag-green">Active</span></td><td class="mono small">Jan-2020</td><td class="small">NRE (fully repatriable, interest tax-free); NRO (taxable, limited repatriation USD 1M/FY); FCNR(B) (FC term deposits, fully repatriable); RFC (returning NRIs); SNRR (Special Non-Resident Rupee Account); Escrow accounts. Interest rates regulated by RBI.</td></tr>
+
+<tr class="row-orange"><td class="mono bold">15/2015-16</td><td>Direct Investment by Residents in JV/WOS Abroad <em>[Superseded by OI Rules 2022 from Aug-2022]</em></td><td class="mono">RBI/FED/2015-16/10</td><td class="mono small">S.6</td><td class="small">FEMA 120/2004-RB (superseded); FEM(OI) Rules 2022; FEM(OI) Regulations 2022</td><td><span class="tag tag-orange">Superseded Aug-2022</span></td><td class="mono small">Jun-2021 (last)<br>Superseded Aug-2022</td><td class="small">Historical reference only (pre-Aug-2022). Now governed by <strong>FEM(Overseas Investment) Rules 2022</strong> and FEM(OI) Regulations 2022. New framework: financial commitment up to 400% of net worth (auto route); two-layer subsidiary restriction; Form ODI/OI for reporting; APR filing.</td></tr>
+
+<tr class="row-green"><td class="mono bold">16/2015-16 ✅</td><td>Export of Goods and Services</td><td class="mono">RBI/FED/2015-16/11</td><td class="mono small">S.7(1)(a)<br>S.7(3)<br>S.47(2)<br>S.8</td><td class="small">FEMA 23(R)/2015-RB [operative until 30-Sep-2026]; FEMA 23(R)/2026-RB [effective 01-Oct-2026]</td><td><span class="tag tag-green">ACTIVE until 30-Sep-2026</span><br><span class="mono" style="font-size:10px">Superseded from 01-Oct-2026 by FEMA 23(R)/2026-RB Directions</span></td><td class="mono small">12-Jan-2026<br>(Also Nov-2025 for 15M repatriation)</td><td class="small">EDF/SOFTEX procedure; realization and repatriation (<strong>15 months</strong> from shipment/invoice); EDPMS monitoring; write-off of unrealised bills; advance receipts; set-off of export receivables against import payables; agency commission; project/service exports; EEFC accounts; Diamond Dollar Accounts; AD bank guarantees for exporter clients.</td></tr>
+
+<tr class="row-blue"><td class="mono bold">17/2016-17<br><span class="mono" style="font-size:10px;color:var(--muted)">[2016-17 series]</span></td><td>Import of Goods and Services <em>(Note: 2016-17 series — not 2015-16)</em></td><td class="mono">RBI/FED/2016-17/12</td><td class="mono small">S.5, S.3</td><td class="small">FEMA 14/2000-RB [operative until 30-Sep-2026]; FEMA 23(R)/2026-RB [effective 01-Oct-2026]</td><td><span class="tag tag-green">Active until 30-Sep-2026</span><br><span class="mono" style="font-size:10px">Superseded from 01-Oct-2026</span></td><td class="mono small">Jan-2022</td><td class="small">Payment methods for imports (LC, DP, DA, advance payment, open account); IDPMS monitoring; evidence of import (Bill of Entry); outward remittance timelines; consignment imports; import of gold/silver. FEMA 23(R)/2026-RB merges import with export from Oct-2026.</td></tr>
+
+<tr class="row-green"><td class="mono bold">18/2015-16</td><td>Reporting under Foreign Exchange Management Act, 1999</td><td class="mono">RBI/FED/2015-16/13</td><td class="mono small">S.7, S.6, S.10, S.11</td><td class="small">All FEMA Regulations (reporting crosses all transactions); Amended per FEMA 3(R)(5)/2026-RB (ECB forms, Feb-2026)</td><td><span class="tag tag-green">Active</span><br><span class="mono" style="font-size:10px">ECB forms revised Feb-2026</span></td><td class="mono small">Apr-2026</td><td class="small">Master reporting framework for ALL FEMA transactions: <strong>FC-GPR</strong> (FDI, 30 days); <strong>FC-TRS</strong> (share transfer, 60 days); <strong>LEC(FII)</strong> (FPI, daily); <strong>Form ECB 1 Revised + ECB 2</strong> (monthly, per AP(DIR) Cir.23/2025-26); <strong>ODI/OI APR</strong> (annual); LRS FETERS/CIMS; EDPMS/IDPMS (trade); IPI (branch IP); FLA (annual, by 15-Jul). Single Master Form (SMF) on FIRMS portal.</td></tr>
+
+<tr class="row-gray"><td class="mono bold">19/2015-16</td><td>Miscellaneous</td><td class="mono">RBI/FED/2017-18/14</td><td class="mono small">Various</td><td class="small">Various FEMA Notifications</td><td><span class="tag tag-green">Active</span></td><td class="mono small">Nov-2018</td><td class="small">Catch-all for residual FEMA provisions and AP directions not covered by specific subject-matter MDs.</td></tr>
+
+<tr class="row-blue"><td class="mono bold">1/2016-17</td><td>Money Transfer Service Scheme (MTSS)</td><td class="mono">RBI/FED/2016-17/52</td><td class="mono small">S.10, S.11</td><td class="small">FEMA 16/2000-RB; MD No.2/2015-16 (Vostro accounts)</td><td><span class="tag tag-green">Active</span></td><td class="mono small">Various</td><td class="small">MTSS framework for inward cross-border personal remittances. Indian Agents and Sub-Agents. RBI approval required. Transaction limits: <strong>USD 2,500 per transaction; max 30 transactions/year</strong> per remitter. Quarterly reporting by Indian Agents.</td></tr>
+
+<tr class="row-green"><td class="mono bold">5/2018-19<br><span class="mono" style="font-size:10px;color:var(--muted)">[2018-19 series]</span></td><td>External Commercial Borrowings (ECB), Trade Credits &amp; Structured Obligations <em>[Significantly amended by FEMA 3(R)(5)/2026-RB, Feb-2026]</em></td><td class="mono">RBI/FED/2018-19/67</td><td class="mono small">S.6(3)(b)<br>S.6(3)(d)</td><td class="small">FEMA 3(R)/2016-RB; FEMA 3(R)(5)/2026-RB [First Amendment Regulations 2026, 09-Feb-2026]</td><td><span class="tag tag-green">Active</span><br><span class="mono" style="font-size:10px">Significantly amended Feb-2026</span></td><td class="mono small">18-Feb-2026<br>(AP(DIR) Cir.23/2025-26)</td><td class="small">ECB limit = <strong>higher of USD 1 billion or 300% of net worth</strong> (auto route). Manufacturing: shorter tenor (1–3 years) up to USD 150 million. MAMP: 3 years standard. End-use restrictions: no real estate, no capital markets. 'Untraceable borrowers' framework. Cross-border guarantees codified. Form ECB 1 (Revised) + ECB 2 mandatory from 18-Feb-2026.</td></tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+
+<!-- ── TAB 2: SECTION-WISE MAPPING ───────────────────────── -->
+<div id="section-map" class="tab-panel">
+  <div class="section-title"><h2>FEMA 1999 — Section-wise Regulatory Mapping</h2><div class="gold-line"></div></div>
+  <p class="section-desc">All 49 sections mapped to applicable Master Directions, FEMA Notifications, Central Government Rules, latest amendments, and practical CA notes.</p>
+
+  <div class="alert alert-red">
+    <span class="alert-icon">⚠️</span>
+    <div class="alert-text">
+      <strong>S.6(3) Omission — Enforcement Controversy (HIGH LITIGATION RISK)</strong>
+      S.6(3) was omitted by Finance Act 2015, notified w.e.f. 15-Oct-2019. Karnataka HC (Dec-2024; Jun-2025): post-omission S.6(3)(b) proceedings = without jurisdiction. Madras HC (Flipkart case): omission ≠ repeal. SC yet to resolve. All clients with pending ED proceedings for post-Oct-2019 S.6(3)(b) violations must take urgent legal opinion.
+    </div>
+  </div>
+
+  <div class="legend">
+    <div class="legend-item"><div class="legend-dot" style="background:var(--green)"></div> High significance / recently updated</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--ltblue)"></div> Capital / Current account provisions</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--ltgold)"></div> Definitions / Exemptions / NRI</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--red)"></div> Enforcement / Penalties / Non-compoundable</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--orange)"></div> Liability / Controversy / Inter-law overlap</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--gray)"></div> Procedural / Administrative</div>
+  </div>
+
+  <div class="table-wrap">
+  <table id="tbl-sec">
+    <thead><tr>
+      <th style="width:65px">Sec. No.</th>
+      <th style="width:100px">Chapter</th>
+      <th style="width:200px">Subject / Key Provision</th>
+      <th style="width:170px">Official RBI Master Direction(s) [Verified MD No.]</th>
+      <th style="width:130px">Official MD No. &amp; RBI Reference</th>
+      <th style="width:155px">FEMA Notification / Regulation</th>
+      <th style="width:145px">Rules / Govt. Notifications</th>
+      <th style="width:145px">Latest Amendment / Update (May 2026)</th>
+      <th style="width:90px">Dealing Authority</th>
+      <th>Practical Notes / CA Relevance</th>
+    </tr></thead>
+    <tbody>
+<tr class="row-gray"><td class="mono bold center">1</td><td class="small">Ch-I<br>Preliminary</td><td class="small bold">Short Title, Extent &amp; Commencement<br>Effective 01-Jun-2000.</td><td class="small">N/A</td><td class="mono small">N/A</td><td class="small">N/A</td><td class="small">GSR 371(E) dated 01-May-2000</td><td class="small">In force from 01-Jun-2000</td><td class="small">N/A</td><td class="small">Jurisdictional anchor. Indian-controlled offshore entities covered. Contraventions by covered persons outside India fall within FEMA.</td></tr>
+
+<tr class="row-orange"><td class="mono bold center">2</td><td class="small">Ch-I<br>Preliminary</td><td class="small bold">Definitions (28 terms)<br>Key: Authorised Person [2(c)], CAT [2(e)], Current A/c [2(j)], Foreign Exchange [2(n)], PRII [2(v)], PROI [2(w)], Export [2(l)].<br><span style="color:#c62828">⚠ S.6(3) OMITTED w.e.f. 15-Oct-2019</span></td><td class="small">All FED MDs — cross-cutting</td><td class="mono small">All FED MDs apply universally</td><td class="small">FEMA 1/2000-RB; FEMA 20(R)/2017-RB; FEMA 396/2019-RB</td><td class="small">FEM(NDI) Rules 2019; FEM(CAT) Rules 2000; FEM(OI) Rules 2022</td><td class="small">S.6(3) omitted w.e.f. 15-Oct-2019 via Finance Act 2015. Divergent HC rulings. SC yet to resolve.</td><td class="small">RBI / Central Govt.</td><td class="small">Residency = 182-day physical presence test (preceding FY). Companies incorporated in India = PRII regardless of control. <strong>S.6(3) omission = HIGH LITIGATION RISK</strong> for pending ED proceedings on post-Oct-2019 violations.</td></tr>
+
+<tr class="row-red"><td class="mono bold center">3</td><td class="small">Ch-II<br>Regulation</td><td class="small bold">Prohibition on Dealing in Foreign Exchange<br>Only Authorised Persons can deal in FX.<br><span style="color:#c62828">⚠ S.3(a) = NON-COMPOUNDABLE with RBI</span></td><td class="small">MD No.3/2015-16 [Money Changing]<br>MD No.16/2015-16 [Export]<br>MD No.17/2016-17 [Import]</td><td class="mono small">MD No.3 (RBI/FED/2015-16/17)<br>MD No.16 (RBI/FED/2015-16/11)<br>MD No.17 (RBI/FED/2016-17/12)</td><td class="small">N/A</td><td class="small">FEM(CAT) Rules 2000</td><td class="small">MD No.3 updated 28-Nov-2025. FEMA 401/2026-RB (30-Apr-2026). FEMA 23(R)/2026-RB effective Oct-2026.</td><td class="small">RBI / AP Banks / ED</td><td class="small"><strong>S.3(a) = hawala/unauthorised FX dealing — non-compoundable with RBI; directly referred to ED.</strong> CA must flag any forex credits in P&amp;L without AP involvement.</td></tr>
+
+<tr class="row-blue"><td class="mono bold center">4</td><td class="small">Ch-II<br>Regulation</td><td class="small bold">Prohibition on Holding of Foreign Exchange<br>No PRII shall hold/own/possess FX/foreign security/IP outside India except as permitted.</td><td class="small">MD No.14/2015-16 [Deposits]<br>MD No.12/2015-16 [Immovable Property]</td><td class="mono small">MD No.14 (RBI/FED/2015-16/9)<br>MD No.12 (RBI/FED/2015-16/7)</td><td class="small">FEMA 12/2000-RB; FEMA 10(R)/2015-RB [7th Amdt Oct-2025: IFSC 3-month retention]</td><td class="small">N/A</td><td class="small">FEM(FC Accounts by Residents) 7th Amdt Regs 2025 (06-Oct-2025): IFSC accounts — export proceeds retention 1M → 3M.</td><td class="small">RBI</td><td class="small">Exemptions: EEFC accounts (within MD No.16); RFC accounts (MD No.14); Diamond Dollar Accounts. Inherited/gifted foreign exchange: S.9 exemption.</td></tr>
+
+<tr class="row-gold"><td class="mono bold center">5</td><td class="small">Ch-II<br>Regulation</td><td class="small bold">Current Account Transactions<br>Freely permitted unless restricted by Central Govt. Rules. Schedules I/II/III of CAT Rules govern prohibited, restricted and limited items.</td><td class="small">MD No.7/2015-16 [LRS]<br>MD No.8/2015-16 [Other Remittances]<br>MD No.17/2016-17 [Import]</td><td class="mono small">MD No.7 (RBI/FED/2017-18/3)<br>MD No.8 (RBI/FED/2015-16/4)<br>MD No.17 (RBI/FED/2016-17/12)</td><td class="small">N/A (S.5 enabling; restrictions via Central Govt. Rules)</td><td class="small">FEM(CAT) Rules 2000: Sch-I (Prohibited), Sch-II (RBI approval), Sch-III (limits, LRS USD 2.5L/FY). IT Act TCS: 20% on LRS &gt; ₹7L (non-edu/med) w.e.f. Oct-2023.</td><td class="small">MD No.8 updated 06-May-2026. LRS TCS 20% from Oct-2023.</td><td class="small">Central Govt. (Rules) / RBI (MDs)</td><td class="small">LRS: USD 2.5 L/FY. TCS 20% on remittances &gt; ₹7 L (non-edu/med) — deductible against ITR. CIMS daily reporting by AD Cat-I banks. Misclassification of capital flows as current account = major FEMA risk.</td></tr>
+
+<tr class="row-green"><td class="mono bold center">6</td><td class="small">Ch-II<br>Regulation</td><td class="small bold">Capital Account Transactions<br>S.6(2): RBI regulates via notifications. S.6(2A) [operative 15-Oct-2019]: Central Govt. regulates Non-Debt Instruments via Rules. S.6(4): NRI/OCI deposits. [S.6(3) OMITTED]<br>Covers: FDI, OI, ECB, NR Deposits, Guarantees, Borrowing, IP, BO/LO/PO.</td><td class="small">MD No.11/2017-18 [FDI]<br>MD No.5/2018-19 [ECB]<br>MD No.14/2015-16 [Deposits]<br>MD No.10/2015-16 [BO/LO/PO]<br>MD No.12/2015-16 [Immovable Property]<br>MD No.9/2015-16 [Insurance]<br>MD No.15/2015-16 [ODI — superseded Aug-2022]<br>MD No.4/2015-16 [Compounding]</td><td class="mono small">MD No.11 (RBI/FED/2017-18/60)<br>MD No.5 (RBI/FED/2018-19/67)<br>MD No.14 (RBI/FED/2015-16/9)<br>MD No.10 (RBI/FED/2015-16/6)<br>MD No.12 (RBI/FED/2015-16/7)<br>MD No.9 (RBI/FED/2015-16/5)<br>MD No.15 (RBI/FED/2015-16/10)<br>MD No.4 (RBI/FED/2015-16/1)</td><td class="small">FEMA 20(R)/2017-RB [FDI equity]; FEM(NDI) Rules 2019; FEM(OI) Rules + Regs 2022; FEMA 3(R)/2016-RB; FEMA 3(R)(5)/2026-RB; FEMA 5(R)/2016-RB; FEMA 8(R)/2026-RB; FEMA 21/2000-RB; FEMA 22/2000-RB; FEMA 1/2000-RB; FEMA 396/2019-RB</td><td class="small">FEM(NDI) Rules 2019; FEM(OI) Rules 2022; FDI Policy 2020 (DPIIT); Press Note 3/2020; FEM(NDI) 2nd Amdt Rules 2026; FEM(Compounding) Rules 2024</td><td class="small">FEMA 8(R)/2026-RB (Jan-2026): Guarantees consolidated. FEMA 3(R)(5)/2026-RB (Feb-2026): ECB enhanced. FEM(NDI) 2nd Amdt 2026 (May-2026): Insurance 100%. FEMA 401/2026-RB (Apr-2026): AP framework. FEM(OI) Rules 2022 (Aug-2022): complete ODI overhaul.</td><td class="small">RBI (S.47) / Central Govt. (S.6(2A) — NDI Rules) / DPIIT (FDI Policy)</td><td class="small"><strong>Most complex section.</strong> Key CA tasks: FC-GPR (30 days); FC-TRS (60 days); Form ECB 1 Revised (monthly); APR/Form ODI (annual); LSF for delayed filings. ODI: 400% net worth (auto). ECB: higher of USD 1B or 300% net worth. Insurance FDI: 100% via auto route (May-2026).</td></tr>
+
+<tr class="row-green"><td class="mono bold center">7</td><td class="small">Ch-II<br>Regulation</td><td class="small bold">Export of Goods &amp; Services<br>Every exporter must furnish EDF to AD bank. Proceeds must be realised and repatriated within 15 months.</td><td class="small"><strong>MD No.16/2015-16</strong> [Export of Goods &amp; Services]<br>MD No.18/2015-16 [Reporting — EDF/EDPMS]</td><td class="mono small"><strong>MD No.16/2015-16</strong><br>(RBI/FED/2015-16/11)<br>Active until 30-Sep-2026<br><br>MD No.18/2015-16<br>(RBI/FED/2015-16/13)</td><td class="small">FEMA 23(R)/2015-RB [operative until 30-Sep-2026]; FEMA 23(R)/(7)/2025-RB [15M repatriation]; FEMA 23(R)/2026-RB [effective 01-Oct-2026]</td><td class="small">DGFT Foreign Trade Policy 2023; EDF via EDPMS</td><td class="small">FEMA 23(R)/(7)/2025-RB (13-Nov-2025): Repatriation 9M → 15M. FEMA 23(R)/2026-RB (13-Jan-2026; effective 01-Oct-2026): Export + Import consolidated; MD No.16 &amp; 17 both superseded.</td><td class="small">RBI / AD Cat-I Banks</td><td class="small">MD No.16/2015-16 governs S.7 — active until 30-Sep-2026. Repatriation: 15 months. EDF mandatory. EDPMS monitored. EEFC accounts within MD No.16. Guarantees for exporter clients: FEMA 8(R)/2026-RB. Write-off from Oct-2026: AD bank discretion (no fixed % cap).</td></tr>
+
+<tr class="row-blue"><td class="mono bold center">8</td><td class="small">Ch-II<br>Regulation</td><td class="small bold">Realization &amp; Repatriation of Foreign Exchange<br>All FX due to PRII must be realised and repatriated within the prescribed period.</td><td class="small">MD No.16/2015-16 [Export — repatriation provisions]</td><td class="mono small">MD No.16/2015-16<br>(RBI/FED/2015-16/11)<br>Active until 30-Sep-2026</td><td class="small">FEMA 23(R)/2015-RB; FEMA 23(R)/(7)/2025-RB [15M repatriation]</td><td class="small">FEM(CAT) Rules 2000</td><td class="small">FEMA 23(R)/(7)/2025-RB (13-Nov-2025): 9 months → 15 months.</td><td class="small">RBI / AD Cat-I Banks</td><td class="small">Write-off of unrealised export proceeds under new FEMA 23(R)/2026-RB (effective Oct-2026): AD bank discretion — no fixed percentage cap. CA Certificate may be required for substantial write-offs.</td></tr>
+
+<tr class="row-gold"><td class="mono bold center">9</td><td class="small">Ch-II<br>Regulation</td><td class="small bold">Exemption from Realization &amp; Repatriation<br>RBI/Govt. may exempt certain FX (EEFC, RFC, inherited FX, gifted FX).</td><td class="small">MD No.14/2015-16 [Deposits — RFC]<br>MD No.16/2015-16 [Export — EEFC provisions]</td><td class="mono small">MD No.14 (RBI/FED/2015-16/9)<br>MD No.16 (RBI/FED/2015-16/11)<br>[EEFC within MD No.16]</td><td class="small">FEMA 12/2000-RB (Holding of FX); FEMA 10(R)/2015-RB [7th Amdt Oct-2025: IFSC 3-month retention]</td><td class="small">N/A</td><td class="small">7th Amendment (06-Oct-2025): IFSC accounts — export proceeds retention extended from 1 month to 3 months.</td><td class="small">RBI</td><td class="small">EEFC Account: within MD No.16 (export). RFC accounts for returning NRIs: within MD No.14. Diamond Dollar Accounts for diamond traders. Gifted/inherited FX: S.9(b) exemption.</td></tr>
+
+<tr class="row-green"><td class="mono bold center">10</td><td class="small">Ch-III<br>Authorised Person</td><td class="small bold">Authorised Persons<br>RBI authorises APs under S.10(1). S.10(4): RBI issues directions. FEMA 401/2026-RB (30-Apr-2026): three-tier AD (Cat-I/II/III), Forex Correspondent model, FFMC phase-out.</td><td class="small">MD No.3/2015-16 [Money Changing]<br>MD No.1/2016-17 [MTSS]<br>MD No.2/2015-16 [Vostro — NR Exchange Houses]<br>[All FED MDs issued under S.10(4)/S.11(1)]</td><td class="mono small">MD No.3 (RBI/FED/2015-16/17)<br>MD No.1 (RBI/FED/2016-17/52)<br>MD No.2 (RBI/FED/2015-16/16)</td><td class="small">FEMA 401/2026-RB [FEM(Authorised Persons) Regulations 2026, 30-Apr-2026]</td><td class="small">N/A</td><td class="small">FEMA 401/2026-RB (30-Apr-2026): AD Cat-III NEW (fintechs/travel; NOF ₹2 Cr); AD Cat-II (NOF ₹10 Cr); FxC model; FFMC no new applications; franchisee wind-down within 2 years; min. turnover ₹50 Cr (Cat-II), ₹10 Cr (FFMCs). MD No.3 updated 28-Nov-2025.</td><td class="small">RBI (FED)</td><td class="small">AD Cat-III is NEW — fintechs and travel platforms. FxC: AD bank bears responsibility for FxC acts. APConnect portal for all AP applications. Franchisee agreements: plan wind-down immediately within 2-year window.</td></tr>
+
+<tr class="row-green"><td class="mono bold center">11</td><td class="small">Ch-III<br>Authorised Person</td><td class="small bold">Directions to Authorised Persons<br>RBI issues binding directions. S.11(3): penalty on AP — up to ₹10,000 + ₹2,000/day.</td><td class="small">All 244 FED Master Directions issued under S.10(4)/S.11(1)</td><td class="mono small">All FED MDs — see 'FED Master Directions Index' tab</td><td class="small">N/A</td><td class="small">N/A</td><td class="small">28-Nov-2025: 244 MDs issued; 9,445 circulars withdrawn. Bridge Circular RBI/2025-26/99 for KYC transition. MD No.8 updated 06-May-2026.</td><td class="small">RBI</td><td class="small">Post-Nov-2025: only current MD versions on rbi.org.in are authoritative. Old A.P. (DIR Series) circulars listed in the Nov-2025 withdrawal annex are no longer valid.</td></tr>
+
+<tr class="row-orange"><td class="mono bold center">12</td><td class="small">Ch-III<br>Authorised Person</td><td class="small bold">Contravention by Authorised Person<br>AP contravening FEMA liable to penalty. RBI can suspend/cancel authorisation.</td><td class="small">MD No.3/2015-16 [Money Changing — cancellation &amp; inspection]</td><td class="mono small">MD No.3/2015-16<br>(RBI/FED/2015-16/17)</td><td class="small">N/A</td><td class="small">N/A</td><td class="small">MD No.3 (Nov-2025): RBI can cancel branch/franchise approvals for FEMA contravention or acts against public interest.</td><td class="small">RBI</td><td class="small">S.38 + S.12: RBI inspection of APs independent of ED investigation powers.</td></tr>
+
+<tr class="row-red"><td class="mono bold center">13</td><td class="small">Ch-IV<br>Penalties</td><td class="small bold">Penalties<br>Up to 3× sum involved or ₹2 lakh + ₹5,000/day. S.13(1A)–(1D) [Finance Act 2015]: Foreign assets &gt; ₹1 Cr in contravention → equivalent Indian assets liable to confiscation under S.37A.</td><td class="small">MD No.4/2015-16 [Compounding of Contraventions]</td><td class="mono small">MD No.4/2015-16<br>(RBI/FED/2015-16/1)<br>Updated Apr-2025</td><td class="small">N/A</td><td class="small">FEM(Compounding Proceedings) Rules 2024 [GSR 566(E), 12-Sep-2024]; FEM(Auth. &amp; Processing) Rules 2019</td><td class="small">FEM(Compounding) Rules 2024 (Sep-2024): RBI ≤ ₹5 Cr; ED &gt; ₹5 Cr; 180-day disposal. Apr-2025: Row 5 cap ₹2 L; 50% enhancement on re-applicants removed.</td><td class="small">ED (S.3a, S.13(1A)–(1D)) / RBI (others ≤ ₹5 Cr) / SAT/HC (appeals)</td><td class="small"><strong>S.13(1A)–(1D): foreign assets &gt; ₹1 Cr — equivalent Indian assets attached via S.37A WITHOUT prior hearing.</strong> CA must urgently advise HNI/NRI clients with undisclosed offshore assets.</td></tr>
+
+<tr class="row-gray"><td class="mono bold center">14 &amp; 14A</td><td class="small">Ch-IV<br>Penalties</td><td class="small bold">Enforcement of Orders (S.14) and Power to Recover Dues (S.14A) [Finance Act 2018]<br>S.14: AA order = civil court decree. S.14A: Income Tax Act recovery mechanism applies.</td><td class="small">N/A</td><td class="mono small">N/A</td><td class="small">N/A</td><td class="small">FEM(Adjudication Proceedings &amp; Appeal) Rules 2000; IT Act 1961 (S.226 recovery via S.14A)</td><td class="small">S.14A inserted by Finance Act 2018</td><td class="small">ED</td><td class="small">S.14: attachment and sale of assets to recover penalty. S.14A: IT-style distrait and TDS attachment applicable for FEMA dues recovery.</td></tr>
+
+<tr class="row-green"><td class="mono bold center">15</td><td class="small">Ch-IV<br>Penalties</td><td class="small bold">Compounding of Contraventions<br>Any person (EXCEPT S.3(a)) may apply for compounding. Voluntary settlement — no further proceedings after payment.<br>LSF: faster alternative for delayed reporting within 3 years.</td><td class="small">MD No.4/2015-16 [Compounding of Contraventions]</td><td class="mono small">MD No.4/2015-16<br>(RBI/FED/2015-16/1)<br>Updated Apr-2025</td><td class="small">N/A</td><td class="small">FEM(Compounding Proceedings) Rules 2024 [GSR 566(E), 12-Sep-2024 — replaces Rules 2000]</td><td class="small">New Rules 2024 (Sep-2024). Apr-2025: Row 5 ₹2 L cap; 50% enhancement removed; LSF ₹7,500 flat for APR/Form ODI II delays; 3-year bar on re-compounding same contravention.</td><td class="small">RBI (≤ ₹5 Cr) / ED (&gt; ₹5 Cr)</td><td class="small">NOT compoundable: S.3(a), ML/TF-linked, repeat within 3 years, unquantifiable sum. LSF is faster/cheaper than compounding for technical delays. Compounding = civil settlement; not criminal conviction; does not disqualify directors.</td></tr>
+
+<tr class="row-gray"><td class="mono bold center">16–35</td><td class="small">Ch-V<br>Adjudication &amp; Appeal</td><td class="small bold">Adjudication (S.16), Appeals: Special Director (S.17), SAT (S.19), HC (S.32). Representation (S.33). Presumption of Culpable Mental State (S.34). Burden of Proof (S.35).<br>ATFE merged into SAT via Finance Act 2017 w.e.f. 26-May-2017.</td><td class="small">N/A</td><td class="mono small">N/A</td><td class="small">N/A</td><td class="small">FEM(Adjudication Proceedings &amp; Appeal) Rules 2000; SAT Act (post-merger)</td><td class="small">ATFE merged into SAT (Finance Act 2017). SAT at BKC, Mumbai.</td><td class="small">ED → Special Director (ED) → SAT → High Court</td><td class="small">SCN from ED → AA (Spl/Addl/Jt Director ED) → appeal to Special Director → appeal to SAT → HC (on questions of law only). Deposit 50% of penalty for appeal. CA/CS/Advocate can appear under S.33. S.34: culpable mental state presumed — accused must disprove.</td></tr>
+
+<tr class="row-red"><td class="mono bold center">36–38</td><td class="small">Ch-VI<br>Enforcement</td><td class="small bold">Director of Enforcement (S.36). Powers of Search &amp; Seizure (S.37). Seizure of Equivalent Indian Assets (S.37A) [Finance Act 2015 — without prior hearing]. RBI Inspection of APs (S.38).</td><td class="small">MD No.3/2015-16 [S.38: RBI inspection of APs]</td><td class="mono small">MD No.3/2015-16<br>(RBI/FED/2015-16/17)<br>[S.38 — RBI inspection]</td><td class="small">N/A</td><td class="small">FEM(Auth. &amp; Processing of Orders on Immovable Assets) Rules 2019 [S.37A]</td><td class="small">S.37A: Finance (No.2) Act 2019. SC refused to quash PMLA proceedings against JSW Steel (2025). Properties transferred within family attachable if linked to proceeds of crime (2026 ruling).</td><td class="small">ED (S.36, S.37, S.37A) / RBI Officers (S.38)</td><td class="small"><strong>S.37A: attachment of equivalent Indian assets WITHOUT prior hearing.</strong> Constitutional validity challenged in multiple HCs. CA must urgently advise all clients with undisclosed offshore assets &gt; ₹1 Cr.</td></tr>
+
+<tr class="row-orange"><td class="mono bold center">39–49</td><td class="small">Ch-VII<br>Miscellaneous</td><td class="small bold">Savings (S.39) | Management Liability (S.40) | Firm/HUF (S.41) | Presumption (S.42) | Bar of Jurisdiction (S.43) | Application of Other Laws (S.44 — PMLA, IT Act, Customs) | Void Transfers (S.45) | Rule-making Power (S.46) | Regulation-making Power (S.47) | Laying before Parliament (S.48) | Repeal of FERA (S.49)</td><td class="small">All FED MDs issued under S.47 and S.10(4)/S.11(1). 244 FED MDs as of Nov-2025.</td><td class="mono small">All FED MDs (see 'FED Master Directions Index' tab). Central Govt. Rules under S.46.</td><td class="small">All FEMA Notifications (FEMA 1/2000-RB to FEMA 401/2026-RB). PMLA 2002 (S.44). IT Act TCS (S.44).</td><td class="small">FEM(NDI) Rules 2019 [S.46]; FEM(OI) Rules 2022 [S.46]; FEM(CAT) Rules 2000 [S.46]; FEM(Compounding) Rules 2024 [S.46]; FEMA 8(R)/2026-RB, FEMA 23(R)/2026-RB, FEMA 401/2026-RB [S.47]</td><td class="small">FEMA 401/2026-RB (Apr-2026); FEMA 23(R)/2026-RB (Jan-2026); FEMA 3(R)(5)/2026-RB (Feb-2026); FEM(NDI) 2nd Amdt Rules 2026 (May-2026)</td><td class="small">RBI (S.47) / Central Govt. (S.46) / Parliament (S.48)</td><td class="small">S.40: directors/CFO/CS personally liable for company FEMA violations. S.41: Karta personally liable for HUF violations. S.44: FEMA + PMLA = concurrent/independent liability; compounding FEMA ≠ escape from PMLA. S.47 notifications = binding law; MD directions = binding on APs.</td></tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+
+<!-- ── TAB 3: REGULATIONS INDEX ──────────────────────────── -->
+<div id="reg-index" class="tab-panel">
+  <div class="section-title"><h2>FEMA Regulations, Rules &amp; Notifications — Complete Index</h2><div class="gold-line"></div></div>
+  <p class="section-desc">All key FEMA Notifications (RBI), Central Government Rules, and DPIIT Press Notes with current status as of May 2026.</p>
+
+  <div class="table-wrap">
+  <table id="tbl-reg">
+    <thead><tr>
+      <th style="width:160px">Notification / Rule Ref.</th>
+      <th style="width:210px">Short Title</th>
+      <th style="width:80px">Issued By</th>
+      <th style="width:85px">Date</th>
+      <th style="width:80px">FEMA Section</th>
+      <th style="width:130px">Current Status</th>
+      <th>Key Content / Notes</th>
+    </tr></thead>
+    <tbody>
+<tr class="row-green"><td class="mono small">FEMA 1/2000-RB</td><td class="small bold">FEM(Permissible Capital Account Transactions) Regulations 2000</td><td class="small center">RBI</td><td class="mono small center">03-May-2000</td><td class="mono small center">S.6(2)</td><td><span class="tag tag-green">Active; amended</span></td><td class="small">Schedules I (PRII) and II (PROI): specifies all permissible capital account transactions. Frequently amended as policy evolves.</td></tr>
+
+<tr class="row-blue"><td class="mono small">FEMA 3(R)/2016-RB</td><td class="small bold">FEM(Borrowing &amp; Lending in Foreign Exchange) Regulations 2016</td><td class="small center">RBI</td><td class="mono small center">26-Apr-2016</td><td class="mono small center">S.6(3)(b)(d)</td><td><span class="tag tag-green">Active</span><br><span class="mono" style="font-size:10px">Amended by FEMA 3(R)(5)/2026-RB</span></td><td class="small">ECB regulations, trade credit (buyers/suppliers credit), FC borrowing by AD banks. Replaces FEMA 3/2000-RB.</td></tr>
+
+<tr class="row-green"><td class="mono small">FEMA 3(R)(5)/2026-RB</td><td class="small bold">FEM(Borrowing &amp; Lending)(First Amendment) Regulations 2026</td><td class="small center">RBI</td><td class="mono small center">09-Feb-2026<br>(Gazetted 16-Feb-2026)</td><td class="mono small center">S.6(3)(b)(d)</td><td><span class="tag tag-red">IN FORCE from 16-Feb-2026</span></td><td class="small">ECB limit: <strong>higher of USD 1 billion or 300% of net worth</strong> (auto route). Manufacturing: shorter tenor (1–3 yr) up to USD 150 million. Schedule I comprehensively substituted. 'Untraceable borrowers' framework. Cross-border guarantees codified. Forms ECB 1 (Revised) + ECB 2 via AP(DIR) Circular No.23 (18-Feb-2026).</td></tr>
+
+<tr class="row-blue"><td class="mono small">FEMA 4(R)/2018-RB</td><td class="small bold">FEM(Borrowing &amp; Lending in Indian Rupees) Regulations 2018</td><td class="small center">RBI</td><td class="mono small center">2018</td><td class="mono small center">S.6(3)(e)</td><td><span class="tag tag-green">Active</span></td><td class="small">INR lending to NRI/OCI close relatives. FCNR(B) loans to returning NRIs. SNRR-linked lending. Replaces FEMA 4/2000-RB.</td></tr>
+
+<tr class="row-blue"><td class="mono small">FEMA 5(R)/2016-RB</td><td class="small bold">FEM(Deposit) Regulations 2016</td><td class="small center">RBI</td><td class="mono small center">01-Apr-2016</td><td class="mono small center">S.6(4)</td><td><span class="tag tag-green">Active; amended</span></td><td class="small">NRE, NRO, FCNR(B), RFC, SNRR accounts. Interest rates regulated by RBI. Replaces FEMA 5/2000-RB.</td></tr>
+
+<tr class="row-blue"><td class="mono small">FEMA 6/2000-RB</td><td class="small bold">FEM(Establishment in India of BO/LO/PO) Regulations 2000</td><td class="small center">RBI</td><td class="mono small center">03-May-2000</td><td class="mono small center">S.6</td><td><span class="tag tag-green">Active; amended</span></td><td class="small">Branch/Liaison/Project Office by foreign company in India. RBI approval via AD Cat-I. AAC filing by Chartered Accountant within 60 days of FY end.</td></tr>
+
+<tr class="row-green"><td class="mono small">FEMA 8(R)/2026-RB</td><td class="small bold">FEM(Guarantees) Regulations 2026</td><td class="small center">RBI</td><td class="mono small center">13-Jan-2026</td><td class="mono small center">S.6</td><td><span class="tag tag-red">IN FORCE Jan-2026</span><br><span class="mono" style="font-size:10px">Replaces FEMA 8/2000-RB + 19 circulars 2002–2023</span></td><td class="small">Consolidated guarantee framework. Types: financial/performance. Eligible issuers: AD banks, Indian companies, residents. <strong>LSF mechanism now applicable to guarantee reporting.</strong> Quarterly reporting on trade credit guarantees discontinued from Q4 FY2026.</td></tr>
+
+<tr class="row-green"><td class="mono small">FEMA 10(R)/2015-RB<br>[incl. 7th Amdt Oct-2025]</td><td class="small bold">FEM(Foreign Currency Accounts by a Person Resident in India) Regulations 2015</td><td class="small center">RBI</td><td class="mono small center">21-Jan-2016<br>7th Amdt: 06-Oct-2025</td><td class="mono small center">S.4, S.9</td><td><span class="tag tag-green">Active; 7th Amdt Oct-2025</span></td><td class="small">EEFC accounts (exporters); RFC accounts (returning NRIs); Diamond Dollar Accounts; Seafarer accounts; IFSC accounts. <strong>7th Amendment (Oct-2025):</strong> IFSC bank accounts — exporters may retain export proceeds for up to 3 months (up from 1 month).</td></tr>
+
+<tr class="row-gold"><td class="mono small">FEMA 11/2000-RB</td><td class="small bold">FEM(Export &amp; Import of Currency) Regulations 2000</td><td class="small center">RBI</td><td class="mono small center">03-May-2000</td><td class="mono small center">S.4, S.6</td><td><span class="tag tag-green">Active; amended</span></td><td class="small">Limits for export/import of Indian and foreign currency by travellers. Currency declaration at customs for amounts exceeding USD 10,000 or equivalent.</td></tr>
+
+<tr class="row-gold"><td class="mono small">FEMA 12/2000-RB</td><td class="small bold">FEM(Holding of Foreign Exchange) Regulations 2000</td><td class="small center">RBI</td><td class="mono small center">03-May-2000</td><td class="mono small center">S.4, S.9</td><td><span class="tag tag-green">Active</span></td><td class="small">Exemptions from repatriation requirement: EEFC accounts, RFC accounts, inherited foreign exchange, gifted foreign exchange.</td></tr>
+
+<tr class="row-gold"><td class="mono small">FEMA 15/2000-RB</td><td class="small bold">FEM(Remittance of Assets) Regulations 2000</td><td class="small center">RBI</td><td class="mono small center">03-May-2000</td><td class="mono small center">S.6(3)</td><td><span class="tag tag-green">Active</span></td><td class="small">Remittance by NRI/OCI of sale proceeds of assets, settlement of deceased estates, winding up of business. <strong>Maximum USD 1 million per FY from NRO. CA Certificate (Form 15CB) + IT Form 15CA mandatory.</strong></td></tr>
+
+<tr class="row-green"><td class="mono small">FEMA 20(R)/2017-RB</td><td class="small bold">FEM(Transfer or Issue of Security by a Person Resident Outside India) Regulations 2017</td><td class="small center">RBI</td><td class="mono small center">07-Nov-2017</td><td class="mono small center">S.6</td><td><span class="tag tag-green">Active</span><br><span class="mono" style="font-size:10px">FEM(NDI) Rules 2019 = primary for substantive FDI</span></td><td class="small">FDI into India: equity and compulsorily convertible instruments. Read with FEM(NDI) Rules 2019 for substantive provisions. FC-GPR and FC-TRS filing obligations.</td></tr>
+
+<tr class="row-gold"><td class="mono small">FEMA 21/2000-RB</td><td class="small bold">FEM(Acquisition &amp; Transfer of Immovable Property in India) Regulations 2000</td><td class="small center">RBI</td><td class="mono small center">03-May-2000</td><td class="mono small center">S.6(3)(h)</td><td><span class="tag tag-green">Active; amended</span></td><td class="small">NRI/OCI: can purchase residential/commercial property in India. Not permitted: agricultural land, plantation property, farmhouse. PROI (corporate): branch office property only.</td></tr>
+
+<tr class="row-gold"><td class="mono small">FEMA 22/2000-RB</td><td class="small bold">FEM(Acquisition &amp; Transfer of Immovable Property Outside India) Regulations 2000</td><td class="small center">RBI</td><td class="mono small center">03-May-2000</td><td class="mono small center">S.6(3)(i)</td><td><span class="tag tag-green">Active; amended</span></td><td class="small">Residents acquiring immovable property outside India: permitted if acquired by gift/inheritance, or during period of residence abroad, or funded via LRS. Borrowing for overseas property under auto route: not permitted.</td></tr>
+
+<tr class="row-green"><td class="mono small">FEMA 23(R)/2015-RB</td><td class="small bold">FEM(Export of Goods &amp; Services) Regulations 2015</td><td class="small center">RBI</td><td class="mono small center">12-Jan-2016</td><td class="mono small center">S.7, S.8</td><td><span class="tag tag-orange">Active until 30-Sep-2026</span><br><span class="mono" style="font-size:10px">Superseded from 01-Oct-2026 by FEMA 23(R)/2026-RB</span></td><td class="small">Operative regulation for export of goods and services until 30-Sep-2026. EDF procedure, repatriation requirements (15 months per 7th Amdt 2025), EDPMS, write-off rules. Read with FED MD No.16/2015-16.</td></tr>
+
+<tr class="row-green"><td class="mono small">FEMA 23(R)/(7)/2025-RB</td><td class="small bold">FEM(Export of Goods &amp; Services) 7th Amendment Regulations 2025</td><td class="small center">RBI</td><td class="mono small center">13-Nov-2025</td><td class="mono small center">S.7, S.8</td><td><span class="tag tag-green">In force (transitional)</span><br><span class="mono" style="font-size:10px">Superseded from 01-Oct-2026 by FEMA 23(R)/2026-RB</span></td><td class="small">Extended repatriation period from <strong>9 months to 15 months</strong> from date of shipment/invoice. IFSC bank accounts: export proceeds retention extended to 3 months.</td></tr>
+
+<tr class="row-green"><td class="mono small">FEMA 23(R)/2026-RB</td><td class="small bold">FEM(Export &amp; Import of Goods &amp; Services) Regulations 2026</td><td class="small center">RBI</td><td class="mono small center">13-Jan-2026</td><td class="mono small center">S.7, S.8</td><td><span class="tag tag-red">Notified Jan-2026<br>EFFECTIVE 01-Oct-2026</span><br><span class="mono" style="font-size:10px">Supersedes FEMA 23(R)/2015-RB + MD No.16 &amp; No.17</span></td><td class="small">Complete overhaul: EDF for goods and services under single unified framework. AD bank delegated powers enhanced. <strong>PRAVAAH portal</strong> for all RBI references. Write-off: AD bank discretion (no fixed % cap). Third-party payments codified. Set-off of export receivables/import payables. Merchant trade integrated.</td></tr>
+
+<tr class="row-blue"><td class="mono small">FEMA 396/2019-RB</td><td class="small bold">FEM(Debt Instruments) Regulations 2019</td><td class="small center">RBI</td><td class="mono small center">17-Oct-2019</td><td class="mono small center">S.6</td><td><span class="tag tag-green">Active; amended</span></td><td class="small">NCDs, bonds, commercial paper by PROI in India. FPI investment in debt instruments. Read with ECB guidelines under MD No.5/2018-19.</td></tr>
+
+<tr class="row-red"><td class="mono small">FEMA 401/2026-RB</td><td class="small bold">FEM(Authorised Persons) Regulations 2026</td><td class="small center">RBI</td><td class="mono small center">30-Apr-2026</td><td class="mono small center">S.10, S.11, S.12</td><td><span class="tag tag-red">IN FORCE from 30-Apr-2026</span></td><td class="small">Three-tier AD system: <strong>AD Cat-I</strong> (banks/large entities), <strong>AD Cat-II</strong> (NBFCs/forex businesses; NOF ₹10 Cr), <strong>AD Cat-III — NEW</strong> (fintechs/travel platforms; NOF ₹2 Cr). Forex Correspondent (FxC) = new principal-agent model. FFMC: no new applications. Franchisee arrangements: wind down within 2 years. Min. annual turnover: ₹50 Cr (Cat-II), ₹10 Cr (FFMCs).</td></tr>
+
+<tr class="row-green"><td class="mono small">FEM(NDI) Rules 2019<br>[incl. 2nd Amdt Rules 2026]</td><td class="small bold">FEM(Non-Debt Instruments) Rules 2019</td><td class="small center">Ministry of Finance</td><td class="mono small center">16-Oct-2019<br>2nd Amdt: May-2026</td><td class="mono small center">S.6(2A)</td><td><span class="tag tag-green">Active</span><br><span class="mono" style="font-size:10px">2nd Amdt Rules 2026 — Insurance FDI 100%</span></td><td class="small">Primary FDI regulation under S.6(2A). Sector-wise schedules: automatic/approval route, sectoral caps, pricing, downstream investment, reporting. <strong>2nd Amendment Rules 2026 (May-2026): Insurance FDI 100% via automatic route</strong> for companies and intermediaries. Beneficial owner definition tightened (aligned with PMLA).</td></tr>
+
+<tr class="row-green"><td class="mono small">FEM(OI) Rules 2022<br>FEM(OI) Regulations 2022<br>OI Directions 2022</td><td class="small bold">FEM(Overseas Investment) Rules, Regulations &amp; Directions 2022</td><td class="small center">MoF + RBI</td><td class="mono small center">22-Aug-2022</td><td class="mono small center">S.6</td><td><span class="tag tag-green">Active; amended</span></td><td class="small">Complete overhaul of overseas investment framework. Replaced FEMA 120/2004-RB and MD No.15/2015-16. Financial commitment: <strong>400% of net worth</strong> under auto route. OI = ODI + OPI + FPI. Max 2 subsidiary layers. Form ODI/OI for all reporting. APR mandatory.</td></tr>
+
+<tr class="row-gold"><td class="mono small">FEM(CAT) Rules 2000</td><td class="small bold">FEM(Current Account Transactions) Rules 2000 [Schedules I, II, III]</td><td class="small center">Ministry of Finance</td><td class="mono small center">03-May-2000</td><td class="mono small center">S.5</td><td><span class="tag tag-green">Active; Sch-III amended periodically</span></td><td class="small">Schedule I: Prohibited (lottery, racing, call-back services, margin calls). Schedule II: RBI prior approval required. Schedule III: Permitted with limits (LRS USD 2.5 L; private visits; emigration; education; medical; maintenance of relatives).</td></tr>
+
+<tr class="row-red"><td class="mono small">FEM(Compounding) Rules 2024<br>[GSR 566(E), 12-Sep-2024]</td><td class="small bold">FEM(Compounding Proceedings) Rules 2024</td><td class="small center">Ministry of Finance</td><td class="mono small center">12-Sep-2024</td><td class="mono small center">S.15</td><td><span class="tag tag-red">IN FORCE from Sep-2024</span><br><span class="mono" style="font-size:10px">Replaces FEM(Compounding) Rules 2000</span></td><td class="small">Revised compounding framework: <strong>RBI ≤ ₹5 Cr; ED &gt; ₹5 Cr.</strong> 180-day disposal. Application format and fee (₹5,000 DD) updated. LSF as alternative to compounding for delayed reporting (within 3 years). Ineligible: S.3(a), ML/TF-linked, repeat within 3 years.</td></tr>
+
+<tr class="row-gray"><td class="mono small">FEM(Adjudication) Rules 2000</td><td class="small bold">FEM(Adjudication Proceedings &amp; Appeal) Rules 2000</td><td class="small center">Ministry of Finance</td><td class="mono small center">03-May-2000</td><td class="mono small center">S.16, S.17, S.33</td><td><span class="tag tag-green">Active</span></td><td class="small">Procedure for adjudication by ED; SCN format; personal hearing; representation by CA/CS/Advocate authorised under S.33.</td></tr>
+
+<tr class="row-red"><td class="mono small">FEM(Auth. &amp; Processing) Rules 2019</td><td class="small bold">FEM(Authentication &amp; Processing of Orders on Immovable Assets) Rules 2019</td><td class="small center">Ministry of Finance</td><td class="mono small center">2019</td><td class="mono small center">S.37A</td><td><span class="tag tag-green">Active</span></td><td class="small">Procedural rules for S.37A attachment/seizure of equivalent Indian assets where offshore assets acquired in contravention are inaccessible or untraceable.</td></tr>
+
+<tr class="row-green"><td class="mono small">DPIIT Consolidated FDI Policy 2020</td><td class="small bold">Consolidated FDI Policy Circular 2020</td><td class="small center">DPIIT (MoCI)</td><td class="mono small center">15-Oct-2020</td><td class="mono small center">S.6 (via NDI Rules)</td><td><span class="tag tag-green">Active; updated via Press Notes</span></td><td class="small">Comprehensive sector-wise FDI policy: automatic route sectors, approval route, caps, conditions, prohibited sectors. Updated periodically through DPIIT Press Notes.</td></tr>
+
+<tr class="row-orange"><td class="mono small">Press Note 3 of 2020</td><td class="small bold">FDI from Land-Bordering Countries: Government Approval Route</td><td class="small center">DPIIT</td><td class="mono small center">17-Apr-2020</td><td class="mono small center">S.6 (via NDI Rules)</td><td><span class="tag tag-orange">Active — tightened by NDI 2nd Amdt 2026</span></td><td class="small">FDI from China, Pakistan, Bangladesh, Nepal, Myanmar, Bhutan requires prior Government approval. <strong>FEM(NDI) 2nd Amendment Rules 2026:</strong> indirect beneficial ownership shift to restricted-jurisdiction entities also requires prior Government approval. Major M&amp;A compliance consideration.</td></tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+
+<!-- ── TAB 4: AMENDMENTS TRACKER ─────────────────────────── -->
+<div id="amendments" class="tab-panel">
+  <div class="section-title"><h2>2025–2026 Amendments &amp; Updates Tracker</h2><div class="gold-line"></div></div>
+  <p class="section-desc">All material FEMA changes from Oct-2025 to May-2026, with verified FED MD references and specific client action points.</p>
+
+  <div class="alert alert-red">
+    <span class="alert-icon">🔴</span>
+    <div class="alert-text">
+      <strong>Immediate action required:</strong>
+      <strong>(1)</strong> Form ECB 1 (Revised) + ECB 2: switch immediately (mandatory from 18-Feb-2026). &nbsp;
+      <strong>(2)</strong> FEMA 401/2026-RB: FFMC and franchisee operators must begin transition planning now. &nbsp;
+      <strong>(3)</strong> FEMA 23(R)/2026-RB: prepare for Oct-2026 implementation (export/import SOPs, PRAVAAH portal).
+    </div>
+  </div>
+
+  <div class="table-wrap">
+  <table id="tbl-amdt">
+    <thead><tr>
+      <th style="width:40px">#</th>
+      <th style="width:100px">Date</th>
+      <th style="width:175px">Notification / Circular</th>
+      <th style="width:200px">Subject</th>
+      <th style="width:130px">FEMA Section (Verified MD No.)</th>
+      <th style="width:80px">Impact</th>
+      <th>Key Change</th>
+      <th>Action Required for CAs / Clients</th>
+    </tr></thead>
+    <tbody>
+<tr class="row-blue"><td class="mono bold center">1</td><td class="mono small">06-Oct-2025</td><td class="small">FEM(FC Accounts by Residents) 7th Amendment Regulations 2025</td><td class="small bold">IFSC bank accounts: export proceeds retention 1 month → 3 months</td><td class="mono small">S.4, S.9<br>[MD No.16/2015-16 — EEFC/FC Accounts]</td><td class="center"><span class="tag tag-blue">🟡 MEDIUM</span></td><td class="small">Exporters maintaining FC accounts with IFSC banks (e.g., GIFT City) can now retain export proceeds for up to 3 months. Other overseas accounts: 1-month retention unchanged.</td><td class="small">Advise exporter clients to consider IFSC-based FC accounts for greater retention flexibility. Update EEFC account advisory notes.</td></tr>
+
+<tr class="row-green"><td class="mono bold center">2</td><td class="mono small">13-Nov-2025</td><td class="small">FEMA 23(R)/(7)/2025-RB</td><td class="small bold">Export proceeds repatriation: 9 months → 15 months</td><td class="mono small">S.7, S.8<br>[MD No.16/2015-16]</td><td class="center"><span class="tag tag-green">🟢 POSITIVE</span></td><td class="small">Extended repatriation timeline significantly reduces FEMA contravention risk for exporters with delayed collections.</td><td class="small">Communicate to all exporter clients immediately. Review pending EDPMS entries. Update internal compliance trackers and export SOP documents.</td></tr>
+
+<tr class="row-red"><td class="mono bold center">3</td><td class="mono small">28-Nov-2025</td><td class="small">RBI DOR.RRC.REC.302/33-01-010/2025-26 — Largest regulatory consolidation in Indian banking history</td><td class="small bold">244 Master Directions issued; 9,445 A.P. (DIR Series) circulars withdrawn</td><td class="mono small">S.10, S.11<br>[All FED MDs]</td><td class="center"><span class="tag tag-red">🔴 HIGH</span></td><td class="small">All entity-specific instructions now in self-contained Master Directions. Old A.P. (DIR Series) circulars listed in the annex are no longer valid. Entity-specific KYC directions per Bridge Circular RBI/2025-26/99.</td><td class="small">Update all internal compliance manuals referencing old A.P. (DIR) circulars. Use only current MD versions from rbi.org.in. Brief client compliance teams immediately.</td></tr>
+
+<tr class="row-red"><td class="mono bold center">4</td><td class="mono small">13-Jan-2026</td><td class="small">FEMA 8(R)/2026-RB — FEM(Guarantees) Regulations 2026</td><td class="small bold">Consolidated Guarantees Regulations; supersedes 19 circulars from 2002–2023</td><td class="mono small">S.6<br>[No standalone Guarantee MD; covered in ECB &amp; FDI MDs]</td><td class="center"><span class="tag tag-red">🔴 HIGH</span></td><td class="small">Single consolidated guarantee regulation. LSF now applicable to guarantee reporting. <strong>Quarterly reporting on trade credit guarantees discontinued from Q4 FY2026.</strong> Guarantee provisions in ECB, FDI, Export/Import MDs amended simultaneously.</td><td class="small">Review all existing guarantee structures for compliance with new consolidated norms. Update reporting workflows. Discontinue old quarterly guarantee returns from Q1 FY2027.</td></tr>
+
+<tr class="row-blue"><td class="mono bold center">5</td><td class="mono small">12-Jan-2026</td><td class="small">FED MD No.16/2015-16 and MD No.17/2016-17 updated</td><td class="small bold">Export and Import MDs updated; transition to FEMA 23(R)/2026-RB from 01-Oct-2026</td><td class="mono small">S.7, S.8<br>[MD No.16/2015-16; MD No.17/2016-17]</td><td class="center"><span class="tag tag-blue">🟡 MEDIUM</span></td><td class="small">Both MDs updated to align with forthcoming 2026 Regulations. Instructions in updated MDs operative until 30-Sep-2026.</td><td class="small">Track MD updates on rbi.org.in. Prepare for Oct-2026 transition: update EDF SOPs, familiarise with PRAVAAH portal.</td></tr>
+
+<tr class="row-red"><td class="mono bold center">6</td><td class="mono small">13-Jan-2026</td><td class="small">FEMA 23(R)/2026-RB — FEM(Export &amp; Import of Goods &amp; Services) Regulations 2026</td><td class="small bold">Export and Import consolidated under single regulation; effective 01-Oct-2026; supersedes MD No.16 and MD No.17</td><td class="mono small">S.7, S.8<br>[MD No.16 until Sep-2026; MD No.17 until Sep-2026]</td><td class="center"><span class="tag tag-red">🔴 HIGH (from Oct-2026)</span></td><td class="small">Principle-based unified framework. Greater AD bank responsibility and delegated powers. PRAVAAH portal for all RBI references. Write-off: AD bank discretion (no fixed % cap). Third-party payments codified. Merchant trade integrated.</td><td class="small"><strong>Prepare now for Oct-2026 transition:</strong><br>1. Map all current export/import SOPs against new regulation<br>2. Train finance, trade and compliance teams<br>3. Coordinate with AD bank on PRAVAAH portal access<br>4. Review write-off policies under AD bank discretion model</td></tr>
+
+<tr class="row-green"><td class="mono bold center">7</td><td class="mono small">09-Feb-2026</td><td class="small">FEMA 3(R)(5)/2026-RB — FEM(Borrowing &amp; Lending)(First Amendment) Regulations 2026</td><td class="small bold">Major ECB amendment; MD No.5/2018-19 updated; new Forms ECB 1 + ECB 2</td><td class="mono small">S.6(3)(b)(d)<br>[MD No.5/2018-19]</td><td class="center"><span class="tag tag-red">🔴 HIGH</span></td><td class="small">ECB limit = <strong>higher of USD 1 billion or 300% of net worth.</strong> Manufacturing: shorter tenor (1–3 yr) up to USD 150 million. 'Untraceable borrowers' framework. Cross-border guarantees explicitly permitted. Corporate restructuring provisions clarified.</td><td class="small">1. Advise eligible borrowers on increased ECB capacity<br>2. Switch to new Form ECB 1 (Revised) + Form ECB 2 immediately<br>3. Review existing ECBs for MAMP compliance<br>4. Manufacturing clients: explore shorter-tenor ECBs</td></tr>
+
+<tr class="row-red"><td class="mono bold center">8</td><td class="mono small">18-Feb-2026</td><td class="small">AP(DIR) Circular No.23 dated 18-Feb-2026 (RBI/2025-26/223)</td><td class="small bold">ECB reporting forms revised: Form ECB 1 (Revised) and Form ECB 2 substituted in MD No.18/2015-16</td><td class="mono small">S.6<br>[MD No.18/2015-16 — Reporting]</td><td class="center"><span class="tag tag-red">🔴 IMMEDIATE</span></td><td class="small">Part V — Annex I (Form ECB 1) and Annex II (Form ECB 2) of MD No.18 (Reporting) substituted with immediate effect from 18-Feb-2026.</td><td class="small"><strong>Switch immediately</strong> to new Form ECB 1 (Revised) and Form ECB 2. All ECB borrowers and AD Category-I banks must use revised formats from 18-Feb-2026.</td></tr>
+
+<tr class="row-red"><td class="mono bold center">9</td><td class="mono small">30-Apr-2026</td><td class="small">FEMA 401/2026-RB — FEM(Authorised Persons) Regulations 2026</td><td class="small bold">Complete AP framework overhaul: three-tier AD, Forex Correspondent model, FFMC phase-out</td><td class="mono small">S.10, S.11<br>[MD No.3/2015-16]</td><td class="center"><span class="tag tag-red">🔴 HIGHEST</span></td><td class="small">AD Cat-I/II/III (<strong>Cat-III is NEW</strong> for fintechs/travel platforms). Forex Correspondent (FxC) = new principal-agent model replacing franchisee model. FFMC: no new applications. Franchisee agreements: wind down or convert to FxC within 2 years. Min. turnover: ₹50 Cr (Cat-II), ₹10 Cr (FFMCs). NOF: ₹10 Cr (Cat-II), ₹2 Cr (Cat-III).</td><td class="small"><strong>Urgent for FFMC/AP clients:</strong><br>1. Review transition options (FxC or AD Cat-II/III application)<br>2. Franchisee agreements: begin wind-down planning<br>3. Fintechs/travel companies: evaluate AD Cat-III opportunity<br>4. All APs: review annual forex turnover targets<br>5. CA AP audits: update checklists for FEMA 401/2026-RB compliance</td></tr>
+
+<tr class="row-green"><td class="mono bold center">10</td><td class="mono small">May-2026</td><td class="small">FEM(Non-Debt Instruments)(Second Amendment) Rules 2026</td><td class="small bold">Insurance FDI raised to 100% via Automatic Route; beneficial owner definition tightened</td><td class="mono small">S.6(2A)<br>[MD No.9/2015-16 — Insurance; MD No.11/2017-18 — FDI]</td><td class="center"><span class="tag tag-red">🔴 HIGH</span></td><td class="small">Insurance companies and intermediaries (brokers, TPAs, loss assessors, surveyors, consultants): <strong>100% FDI via automatic route</strong> (IRDAI compliance required). Beneficial owner definition aligned with PMLA 2002. Indirect beneficial ownership shift to land-bordering country entities requires prior Government approval.</td><td class="small">1. Insurance sector clients: evaluate 100% FDI structures immediately<br>2. Review beneficial ownership across all FDI structures for PMLA alignment<br>3. M&amp;A: check if ownership transfer triggers land-bordering country approval</td></tr>
+
+<tr class="row-blue"><td class="mono bold center">11</td><td class="mono small">06-May-2026</td><td class="small">FED MD No.8/2015-16 (Other Remittance Facilities) — Updated</td><td class="small bold">Miscellaneous resident remittance facilities consolidated and updated post-FEMA 401/2026-RB</td><td class="mono small">S.5, S.6<br>[MD No.8/2015-16]</td><td class="center"><span class="tag tag-blue">🟡 MEDIUM</span></td><td class="small">Updated to reflect FEMA 401/2026-RB changes and latest LRS/remittance circulars. All resident remittance instructions consolidated with updated source circulars.</td><td class="small">Review remittance advisory notes for HNWI and NRI clients. Update LRS documentation and compliance checklists.</td></tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+
+</div><!-- /main -->
+
+<!-- ══ FOOTER ═══════════════════════════════════════════════ -->
+<footer>
+  <strong>S S Sancheti &amp; Associates</strong> · Chartered Accountants · Mumbai &nbsp;|&nbsp;
+  Foreign Exchange Management Act 1999 — Complete Regulatory Reference &nbsp;|&nbsp;
+  <strong>Updated: May 2026</strong> &nbsp;|&nbsp;
+  For professional reference only. Verify all provisions from official RBI and Ministry of Finance sources before relying on this document.
+</footer>
+
+<script>
+// ── Tab switching ─────────────────────────────────────────────
+function switchTab(id) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  event.currentTarget.classList.add('active');
+  // re-run search on new tab
+  filterTables(document.getElementById('searchInput').value);
+}
+
+// ── Search/filter ─────────────────────────────────────────────
+function filterTables(q) {
+  q = q.toLowerCase().trim();
+  let total = 0, visible = 0;
+
+  document.querySelectorAll('tbody tr').forEach(row => {
+    if (!q) {
+      row.classList.remove('hidden');
+      total++; visible++;
+    } else {
+      const text = row.textContent.toLowerCase();
+      total++;
+      if (text.includes(q)) {
+        row.classList.remove('hidden');
+        visible++;
+      } else {
+        row.classList.add('hidden');
+      }
+    }
+  });
+
+  const rc = document.getElementById('resultCount');
+  if (q) {
+    rc.textContent = visible + ' of ' + total + ' rows match';
+  } else {
+    rc.textContent = '';
+  }
+}
+
+document.getElementById('searchInput').addEventListener('input', function() {
+  filterTables(this.value);
+});
+
+// ── Keyboard shortcut: / to focus search ─────────────────────
+document.addEventListener('keydown', function(e) {
+  if (e.key === '/' && document.activeElement.tagName !== 'INPUT') {
+    e.preventDefault();
+    document.getElementById('searchInput').focus();
+  }
+});
+</script>
+</body>
+</html>
